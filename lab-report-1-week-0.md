@@ -1,2 +1,1 @@
-UHHHH
-! [Image] (YUH.jpg "I hate markdown imafes")
+![Image](image.jpg "I hate markdown images")
