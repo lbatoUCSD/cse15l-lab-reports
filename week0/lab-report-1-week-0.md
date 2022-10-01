@@ -1,0 +1,1 @@
+![Image](week0labimage.jpg "I hate markdown images")
