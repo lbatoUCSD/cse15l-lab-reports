@@ -76,12 +76,15 @@ The following shows an image of the landing page after running `SearchEngine`. T
 Our first function takes the form of `/add?s=`. The argument after the `=` is a String that gets added into an ArrayList, which stores all the Strings that were added to the server.
 
 ![image](2.png)
+
 *Adding the String "astronomy"*
 
 ![image](3.png)
+
 *Adding the String "biology"*
 
 ![image](4.png)
+
 *Adding the String "computerscience"*
 
 *Note: all Strings are stored simultanously in the server in an ArrayList. The Strings aren't being replaced within the ArrayList*
@@ -92,9 +95,11 @@ Our next functions takes the form of `/search?s=`. The argument after the `=` ta
 
 
 ![image](5.png)
+
 *Searching for Strings containing "o"*
 
 ![image](6.png)
+
 *Searching for Strings containing "om"*
 
 *Note: In the second image, "biology" does not contain "om", which is why the return is empty. However, it is still stored within the server.*
