@@ -183,8 +183,8 @@ $ less -m <<path>>
 $ less -m 911report/preface.txt
 ```
 ## *Output* ##
-![Image](less3A.png "I hate images")
+![Image](less3a.png "I hate images")
 
-![Image](less3B.png "Images suck doo doo feces")
+![Image](less3b.png "Images suck doo doo feces")
 
 The output shows the contrast of the command as we go further into the file. It actually shows a progress bar at the bottom, which helps us gauge where we are in terms of the text as a whole and how big the text is in a sense.
