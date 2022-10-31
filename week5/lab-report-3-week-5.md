@@ -105,13 +105,85 @@ grep -h "<<string>>" <<path>>
 $ grep -h "9/11" 911report/chapter-1.txt
 ```
 ## *Output* ##
-![image](grep-h.png "pic")
+![Image](grep-h.png "pic")
+
+The ouput printed out the specified `.txt` file and printed it out, but highlighting the text within. This is useful for when looking for certain strings in large text files manually, especially for larger texts.
 ## *Syntax* ##
 ```
+$ grep -l "<<string>>" <<path>>
 ```
 ## *Input* ##
 ```
+$ grep -l "9/11" 911report/*.txt
 ```
 ## *Output* ##
 ```
+911report/chapter-1.txt
+911report/chapter-10.txt
+911report/chapter-11.txt
+911report/chapter-12.txt
+911report/chapter-13.1.txt
+911report/chapter-13.2.txt
+911report/chapter-13.3.txt
+911report/chapter-13.4.txt
+911report/chapter-13.5.txt
+911report/chapter-2.txt
+911report/chapter-3.txt
+911report/chapter-5.txt
+911report/chapter-6.txt
+911report/chapter-7.txt
+911report/chapter-8.txt
+911report/chapter-9.txt
+911report/preface.txt
 ```
+`-l` returns all the matching files that contain the `"<<string>>"` argument. This is useful for finding just the files that contain the string. When handling expansive texts, this can easily search for key-terms witin those texts.
+
+## ***less*** ##
+```
+less <<path>>
+```
+`less` *uses the* `<<path>>` and returns the contents of it incrementally, fully controlled by the user.
+## *Syntax* ##
+```
+$ less -N <<file>>
+```
+## *Input* ##
+```
+$ less -N  911report/preface.txt
+```
+## *Output* ##
+![Image](less1.png "this sucks")
+`-N` modifies the print out to number the lines. This is useful when trying to reference strings in a text file that spans thousands of lines long, as the program can just call to search that line instead.
+## *Syntax* ##
+```
+$ less -f <<path>>
+```
+## *Input* ##
+```
+$ less -f .
+```
+## *Output* ##
+```
+[text of all the files]
+drwxrwxrwx 6 lbato ieng6_staff  4096 Oct 26 14:40 ./
+drwxrwxrwx 5 lbato ieng6_staff  4096 Oct 26 14:41 ../
+drwxrwxrwx 2 lbato ieng6_staff  4096 Oct 26 14:38 911report/
+drwxrwxrwx 2 lbato ieng6_staff 65536 Oct 26 14:39 biomed/
+drwxrwxrwx 8 lbato ieng6_staff  4096 Oct 26 14:40 government/
+drwxrwxrwx 2 lbato ieng6_staff 20480 Oct 26 14:41 plos/
+```
+`-f` allowed us to read directories and other paths (not just actual files). It found and listed data on all the files within our working directory: `~/skill-demo1/technical`. This is useful for knowing what files are in the working directory and information on each file like when it was last updated and storage.
+
+## *Syntax* ##
+```
+$ less -m <<path>>
+```
+## *Input* ##
+```
+$ less -m 911report/preface.txt
+```
+## *Output* ##
+![Image](less3A.png)
+![Image](less3B.png)
+
+The output shows the contrast of the command as we go further into the file. It actually shows a progress bar at the bottom, which helps us gauge where we are in terms of the text as a whole and how big the text is in a sense.
